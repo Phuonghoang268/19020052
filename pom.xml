@@ -20,6 +20,11 @@
             <artifactId>java-google-speech-api</artifactId>
             <version>V2.0</version>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.22</version>
+        </dependency>
     </dependencies>
 
     <build>
