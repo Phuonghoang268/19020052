@@ -180,6 +180,8 @@ public class Controller implements Initializable {
         listView.getItems().clear();
         view("");
         updateFile();
+        eng.setText("");
+        viet.setText("");
     }
     public void sentence(ActionEvent event) {
         try{
@@ -201,7 +203,7 @@ public class Controller implements Initializable {
             data=data+Dictionary.words[i].getWord_target()+"\t"+Dictionary.words[i].getWord_explain()+"\n";
         }
         FileOutputStream os= null;
-        File file=new File("dic1.txt");
+        File file=new File("dic.txt");
         try {
             os=new FileOutputStream(file);
         } catch (FileNotFoundException e) {

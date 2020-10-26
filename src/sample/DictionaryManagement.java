@@ -23,7 +23,7 @@ public class DictionaryManagement {
 
     public static void insertFromFile() {
         try {
-            File file = new File("dic1.txt");
+            File file = new File("dic.txt");
             Scanner scan = new Scanner(file);
             while(scan.hasNextLine()) {
                 String w1 = scan.next();
@@ -73,7 +73,7 @@ public class DictionaryManagement {
     public static void readFromMySQL(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/dictionary";// your db name
+            String url = "jdbc:mysql://localhost:3306/translation_dictionary";// your db name
             String user = "root"; // your db username
             String password = ""; // your db password
             Connection conn = DriverManager.getConnection(url, user, password);
@@ -81,10 +81,10 @@ public class DictionaryManagement {
                 System.out.println("Connect success!");
             }
             Statement statement = conn.createStatement();
-            ResultSet sql = statement.executeQuery("select * from dictionary");
+            ResultSet sql = statement.executeQuery("select * from av");
             while(sql.next()){
-                String w1= sql.getString(1);
-                String w2=sql.getString(2);
+                String w1= sql.getString(2);
+                String w2=sql.getString(5)+"\n"+sql.getString(4);
                 Word temp = new Word(w1, w2);
                 Dictionary.addWord(temp);
             }
