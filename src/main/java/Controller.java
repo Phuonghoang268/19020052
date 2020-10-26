@@ -1,5 +1,3 @@
-package sample;
-
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import javafx.collections.FXCollections;
@@ -16,13 +14,15 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-import javax.swing.text.html.Option;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Optional;
+import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML
@@ -67,7 +67,7 @@ public class Controller implements Initializable {
         }
 
         listView.getItems().addAll(list.keySet());
-        java.util.Collections.sort(listView.getItems());
+        Collections.sort(listView.getItems());
     }
 
     public void setMouse() {
@@ -132,8 +132,8 @@ public class Controller implements Initializable {
     }
     public void dictionaryExportToFile(){
         String data="";
-        for(int i=0;i<Dictionary.count;i++){
-            data=data+Dictionary.words[i].getWord_target()+"\t"+Dictionary.words[i].getWord_explain()+"\n";
+        for(int i = 0; i< Dictionary.count; i++){
+            data=data+ Dictionary.words[i].getWord_target()+"\t"+ Dictionary.words[i].getWord_explain()+"\n";
         }
         FileOutputStream os= null;
         File file=new File("Dictionary_Export.txt");
@@ -187,7 +187,7 @@ public class Controller implements Initializable {
         try{
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("Sentence_Translate.fxml"));
+            loader.setLocation(getClass().getResource("SentenceTranslate.fxml"));
             Parent add = loader.load();
             Scene scene = new Scene(add);
             stage.setScene(scene);
@@ -199,8 +199,8 @@ public class Controller implements Initializable {
 
     public static void updateFile(){
         String data="";
-        for(int i=0;i<Dictionary.count;i++){
-            data=data+Dictionary.words[i].getWord_target()+"\t"+Dictionary.words[i].getWord_explain()+"\n";
+        for(int i = 0; i< Dictionary.count; i++){
+            data=data+ Dictionary.words[i].getWord_target()+"\t"+ Dictionary.words[i].getWord_explain()+"\n";
         }
         FileOutputStream os= null;
         File file=new File("dic1.txt");

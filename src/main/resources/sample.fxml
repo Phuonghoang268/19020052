@@ -9,7 +9,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
     <top>
         <MenuBar style="-fx-background-color: #e7e7e7;" BorderPane.alignment="CENTER">
             <menus>
@@ -38,7 +38,7 @@
                     <children>
                         <ImageView fitHeight="700.0" fitWidth="336.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../image/c2c317b76054b9488ddad2370a7c2266.jpg" />
+                                <Image url="@c2c317b76054b9488ddad2370a7c2266.jpg" />
                             </image>
                         </ImageView>
                         <Label layoutX="7.0" layoutY="7.0" text="Word" />
@@ -59,7 +59,7 @@
                     <children>
                         <ImageView fitHeight="838.0" fitWidth="464.0" layoutX="-8.0" layoutY="-92.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../image/c2c317b76054b9488ddad2370a7c2266.jpg" />
+                                <Image url="@c2c317b76054b9488ddad2370a7c2266.jpg" />
                             </image>
                         </ImageView>
                         <Label layoutX="121.0" layoutY="37.0" text="Meaning" />
