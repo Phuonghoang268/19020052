@@ -44,7 +44,7 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        DictionaryManagement.insertFromFile();
+        DictionaryManagement.insertFromFile() ;
         setMouse();
         view("");
         word.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -203,7 +203,7 @@ public class Controller implements Initializable {
             data=data+Dictionary.words[i].getWord_target()+"\t"+Dictionary.words[i].getWord_explain()+"\n";
         }
         FileOutputStream os= null;
-        File file=new File("dic.txt");
+        File file=new File("dic1.txt");
         try {
             os=new FileOutputStream(file);
         } catch (FileNotFoundException e) {

@@ -23,7 +23,7 @@ public class DictionaryManagement {
 
     public static void insertFromFile() {
         try {
-            File file = new File("dic.txt");
+            File file = new File("dic1.txt");
             Scanner scan = new Scanner(file);
             while(scan.hasNextLine()) {
                 String w1 = scan.next();
